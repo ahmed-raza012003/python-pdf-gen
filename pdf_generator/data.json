@@ -1,0 +1,42 @@
+{
+  "customer": {
+    "name": "Ahmad Raza",
+    "title": "Mr",
+    "customer_number": "BES100182004",
+    "account_number": "BES1099732E",
+    "service_address": "312-314 Colne Road\nBurnley\nLancashire\nBB10 1DZ",
+    "phone": "TBC",
+    "email": "ahmad.raza@example.com"
+  },
+  "account": {
+    "mpan": "1610014114239",
+    "profile_class": "04",
+    "account_type": "Business",
+    "contract_type": "Tracker",
+    "product_type": "Electricity - Tracker - Day and Night",
+    "contract_start_date": "20/03/2025",
+    "contract_start_date_display": "20 Mar 2025",
+    "contract_end_date": "48 months from the supply start date",
+    "connection_date": "2025-01-15",
+    "meter_number": "MTR-987654321",
+    "service_type": "Electricity",
+    "billing_cycle": "Monthly"
+  },
+  "pricing": {
+    "standing_charge": "£0.78",
+    "standing_charge_unit": "per day",
+    "rate_1": "30.40",
+    "rate_1_unit": "p / kWh",
+    "rate_1_label": "Rate 1",
+    "rate_2": "21.10",
+    "rate_2_unit": "p / kWh",
+    "rate_2_label": "Rate 2",
+    "rate_1_description": "Day charge",
+    "rate_2_description": "Night Charge",
+    "rate_3_description": "Evening/Weekend charge"
+  },
+  "date": "2025-03-13",
+  "date_display": "Thursday, 13 March 2025",
+  "website": "www.aramcoenergy.co.uk",
+  "business_hours": "8:30am to 5:30pm, Monday to Friday"
+}
