@@ -1,6 +1,6 @@
 """
-Static Pages Template Module
-This module contains functions to generate static pages for the PDF.
+Welcome Letter Static Pages Template Module
+This module contains functions to generate static pages for the welcome letter PDF.
 """
 
 from reportlab.lib.pagesizes import A4
@@ -35,14 +35,15 @@ def add_page_footer(canvas_obj, page_num, total_pages):
     canvas_obj.restoreState()
 
 
-def generate_static_pages(canvas_obj):
+def generate_static_pages(canvas_obj, data=None):
     """
-    Generate static pages (pages 3-10).
+    Generate static pages (pages 3-10) for welcome letter.
     These pages have the same design every time - a simple template with
     header, content area, and footer.
     
     Args:
         canvas_obj: The ReportLab canvas object
+        data: Optional data dictionary (not used in static pages, but kept for consistency)
     """
     page_width, page_height = A4
     total_pages = 10

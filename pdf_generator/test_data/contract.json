@@ -1,0 +1,28 @@
+{
+  "customer": {
+    "name": "John Doe",
+    "title": "Mr",
+    "customer_number": "CON123456",
+    "account_number": "ACC789012",
+    "service_address": "123 Main Street\nLondon\nUK\nSW1A 1AA",
+    "phone": "+44 20 1234 5678",
+    "email": "john.doe@example.com"
+  },
+  "account": {
+    "contract_type": "Fixed",
+    "product_type": "Electricity - Fixed Rate",
+    "contract_start_date": "01/04/2025",
+    "contract_start_date_display": "1 Apr 2025",
+    "contract_end_date": "31/03/2026",
+    "service_type": "Electricity"
+  },
+  "pricing": {
+    "standing_charge": "£0.85",
+    "standing_charge_unit": "per day",
+    "rate_1": "25.50",
+    "rate_1_unit": "p / kWh"
+  },
+  "date": "2025-03-15",
+  "date_display": "Saturday, 15 March 2025"
+}
+

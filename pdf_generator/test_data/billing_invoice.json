@@ -1,0 +1,38 @@
+{
+  "customer": {
+    "name": "Jane Smith",
+    "title": "Ms",
+    "customer_number": "BIL987654",
+    "account_number": "ACC456789",
+    "service_address": "456 High Street\nManchester\nUK\nM1 1AB",
+    "phone": "+44 161 9876 5432",
+    "email": "jane.smith@example.com"
+  },
+  "account": {
+    "mpan": "1234567890123",
+    "meter_number": "MTR-123456789",
+    "service_type": "Electricity",
+    "billing_cycle": "Monthly"
+  },
+  "invoice": {
+    "invoice_number": "INV-2025-001",
+    "invoice_date": "2025-03-01",
+    "invoice_date_display": "1 March 2025",
+    "due_date": "2025-03-31",
+    "due_date_display": "31 March 2025",
+    "period_start": "2025-02-01",
+    "period_end": "2025-02-28",
+    "total_amount": "£125.50",
+    "vat_amount": "£25.10",
+    "net_amount": "£100.40"
+  },
+  "usage": {
+    "units_used": "450",
+    "unit_type": "kWh",
+    "rate": "22.31",
+    "rate_unit": "p / kWh"
+  },
+  "date": "2025-03-01",
+  "date_display": "Saturday, 1 March 2025"
+}
+
