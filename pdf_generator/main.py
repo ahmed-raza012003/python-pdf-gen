@@ -8,7 +8,7 @@ import argparse
 import os
 import sys
 from datetime import datetime
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
@@ -176,6 +176,37 @@ def health_check():
     return jsonify({'status': 'healthy'}), 200
 
 
+@app.route('/results/<filename>', methods=['GET'])
+def get_pdf(filename):
+    """
+    Retrieve a PDF file from the results directory by filename.
+    
+    Args:
+        filename: Name of the PDF file to retrieve
+    
+    Returns:
+        PDF file if found, 404 if not found
+    """
+    results_dir = "results"
+    
+    # Security: Prevent directory traversal attacks
+    if '..' in filename or '/' in filename or '\\' in filename:
+        return jsonify({'status': 'error', 'message': 'Invalid filename'}), 400
+    
+    # Ensure filename ends with .pdf
+    if not filename.endswith('.pdf'):
+        return jsonify({'status': 'error', 'message': 'File must be a PDF'}), 400
+    
+    file_path = os.path.join(results_dir, filename)
+    
+    # Check if file exists
+    if not os.path.exists(file_path):
+        return jsonify({'status': 'error', 'message': 'File not found'}), 404
+    
+    # Serve the PDF file
+    return send_from_directory(results_dir, filename, mimetype='application/pdf')
+
+
 def cli_main():
     """Handle CLI mode."""
     parser = argparse.ArgumentParser(description='Generate PDF documents')
@@ -227,5 +258,6 @@ if __name__ == "__main__":
         print("  POST /generate/welcome-letter")
         print("  POST /generate/contract")
         print("  POST /generate/billing-invoice")
+        print("  GET  /results/<filename>     - Get PDF file by filename")
         print("  GET  /health")
         app.run(debug=True, host='0.0.0.0', port=5000)
